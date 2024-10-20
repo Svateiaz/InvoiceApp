@@ -1,0 +1,10 @@
+- modify in database:
+          T_ADDRESS: delete UserId column
+          T_CFG_USERS: add AddressId column
+          T_SUPPLIERS: add AddressId column
+          T_INVOICE_STATUS: rename StatusId into Status and Status into StatusId
+
+-look up design patterns and solid principles
+-finishing controllers and testing them
+
+
