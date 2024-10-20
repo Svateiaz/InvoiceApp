@@ -14,13 +14,16 @@ function App() {
             const response = await fetch('https://localhost:7015/api/User'); // Adjust the URL if needed
             if (!response.ok) {
                 throw new Error('Network response was not ok');
+
             }
             const data = await response.json();
             setUsers(data); // Set the fetched user data to state
+            console.log(data)
         } catch (error) {
             console.error('There was a problem with the fetch operation:', error);
         }
     }
+
 
     // Render loading or user data
     // Flavia was here and did a second push push
@@ -31,7 +34,9 @@ function App() {
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Username</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone Number</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -39,7 +44,9 @@ function App() {
                     {users.map(user => (
                         <tr key={user.id}>
                             <td>{user.id}</td>
-                            <td>{user.username}</td>
+                            <td>{user.fullName}</td>
+                            <td>{user.email}</td>
+                            <td>{user.phoneNumber}</td>
                         </tr>
                     ))}
                 </tbody>
