@@ -23,6 +23,7 @@ function App() {
     }
 
     // Render loading or user data
+    // Flavia was here
     const contents = users.length === 0
         ? <p><em>Loading... Please refresh once the ASP.NET backend has started.</em></p>
         : (
@@ -34,6 +35,7 @@ function App() {
                     </tr>
                 </thead>
                 <tbody>
+               
                     {users.map(user => (
                         <tr key={user.id}>
                             <td>{user.id}</td>
@@ -47,7 +49,8 @@ function App() {
     return (
         <div>
             <h1 id="tableLabel">User List</h1>
-            <p>This component demonstrates fetching user data from the server.</p>
+           
+            <p>This component demonstrates fetching user data from the server by Flavia.</p>
             {contents}
         </div>
     );
